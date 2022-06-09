@@ -1,0 +1,230 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Comic Sans MS', sans-serif;
+  margin: 0;
+}
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+
+button{
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid;
+  box-shadow: 2px 2px 10px #223680;
+  color: #5577F3;
+  background-color: white;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #E6EAFB;
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+  background-color: #5577F3;
+}
+header .logo{
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: #f3f3f3;
+  font-size: 2em;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+header a{
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+header a:hover{
+  color: black;
+}
+#eslogan{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        )
+        ,url("https://cdn.pixabay.com/photo/2014/01/26/19/46/blocks-252602_960_720.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+}
+#eslogan h1{
+  color: white;
+}
+#eslogan button{
+  font-size: 1.75em;
+}
+#aprendizajes .container {
+  text-align: center;
+  padding: 200px 12px;
+}
+#aprende{
+  background-color: #456CCC;
+  color: white;
+  text-align:center;
+}
+#aprende .container{
+  padding: 150px 12px;
+}
+
+#aprende h2{
+  margin-top: 0;
+  font-size: 3.2em;
+}
+#aprende p{
+  display: none;
+  margin: 5px;
+}
+#aprende .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 10px 0px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.carta:first-child{
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url("https://cdn.pixabay.com/photo/2016/07/08/08/59/background-1503863_960_720.png");
+}
+.carta:nth-child(2){
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url("https://st.depositphotos.com/2271235/4163/v/600/depositphotos_41632987-stock-illustration-numbers-like-farm-animals.jpg");
+}
+.carta:nth-child(3){
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url("https://i.scdn.co/image/ab67616d0000b27330b8486ad4805b45e4c557c3");
+}
+.carta:nth-child(4){
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url("https://chilepsicologos.cl/wp-content/uploads/2021/10/test-de-inteligencia.jpg");
+}
+footer{
+  background-color: #5577F3;
+}
+footer p{
+  margin: 0;
+  padding: 12px;
+  color: white;
+}
+footer .container{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer .redes{
+  height: 50px;
+  width: 50px;
+}
+@media (min-width: 815px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #eslogan h1{
+        font-size: 5em;
+    }
+
+    #aprendizajes .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #aprendizajes .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #aprendizajes h2{
+        margin-top: 0px;
+    }
+    #aprendizajes .img-container{
+        background-image: url("teacher.png");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 700px;
+    }
+    #aprende .actividades{
+        display: flex;
+        justify-content: center;
+    }
+    #aprende p{
+        display: block;
+        margin-bottom: 30px;
+    }
+    #aprende .carta{
+        height: 350px;
+        width: 350px;
+    }
+    .carta button{
+      padding: 5px;
+
+    }
+    #aprende button{
+      margin: 0;
+      alignment-baseline: before-edge;
+    }
+    footer .container{
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,121 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+h2{font-size: 2.7em;
+    color: #4492DE;
+    margin-top: 40px;
+    text-align: center;}
+h3{font-size: 2em;}
+p{font-size: 1.5em;} 
+body{
+  font-family: 'Comic Sans MS', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+header{
+  background-color: #5577F3;
+}
+header .logo{
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: #f3f3f3;
+  font-size: 2em;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+header a{
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+header a:hover{
+  color: black;
+}
+button{
+  padding: 20px 20px;
+  border-radius: 20px;
+  border-collapse: collapse;
+  border-color: whitesmoke;
+  font-size: 1.5em;
+  font-family: 'Comic Sans MS', sans-serif;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  background-color: #E7DC29
+}
+button:hover{
+  background-color: #BCB216;
+}
+.radios{
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  margin: 10px;
+  border-radius: 50px;
+}
+.resultado{
+  font-size: 1.5em;
+
+}
+input{
+  margin: 20px;
+}
+p input {
+  margin-right: 1px;
+}
+#preguntas img{
+  height: 40px ;
+  width: 40px;
+  cursor: pointer;
+}
+footer{
+  background-color: #5577F3;
+}
+footer p{
+  margin: 0;
+  padding: 12px;
+  color: white;
+  font-size: 1.3em;
+}
+footer .container{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer .redes{
+  height: 50px;
+  width: 50px;
+}
+@media (min-width: 720px){
+
+  header{
+    width: 100%;
+  }
+  header .container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav{
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }    
+
+  footer .container{
+    justify-content: flex-end;
+  }

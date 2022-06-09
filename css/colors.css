@@ -1,0 +1,133 @@
+[type=checkbox]{
+      position: absolute;
+      opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    [type=checkbox] + img {
+      cursor: pointer;
+    }
+    [type=checkbox]:checked + img {
+      outline: 2px solid #000;
+    }
+*{
+  box-sizing: border-box;
+}
+img{
+  width: 200px;
+  height: 100px;
+}
+#cuerpo{
+  height: 90vh;
+}
+button{
+  margin-bottom: 30px;
+}
+html{
+  scroll-behavior: smooth;
+}
+h1{font-size: 3em;
+    margin: 10px ;
+     color:#515151 ; }
+
+h2{font-size: 2em;
+    color:#6F6F6F ;
+    margin-top: 10px;
+    text-align: center;}
+h3{font-size: 1.5em;}
+p{font-size: 1.5em;} 
+.name{
+  margin-top: 60px;
+  font-size: 3em;
+  font-weight: bold;
+}
+body{
+  font-family: 'Comic Sans MS', sans-serif;
+  margin: 0;
+  text-align: center;
+}
+button{
+  padding: 20px 20px;
+  border-radius: 20px;
+  border-collapse: collapse;
+  border-color: whitesmoke;
+  font-size: 1.5em;
+  font-family: 'Comic Sans MS', sans-serif;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  background-color: whitesmoke;
+}
+button:hover{
+  background-color: #E4E4E4 ;
+}
+header{
+  background-color: #5577F3;
+}
+header .logo{
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: #f3f3f3;
+  font-size: 2em;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+header a{
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+header a:hover{
+  color: black;
+}
+
+footer{
+  background-color: #5577F3;
+}
+footer p{
+  margin: 0;
+  padding: 12px;
+  color: white;
+  font-size: 1.3em;
+}
+footer .container{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer .redes{
+  height: 50px;
+  width: 50px;
+}
+@media (min-width: 720px){
+
+  header{
+    width: 100%;
+  }
+  header .container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav{
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }    
+  footer .container{
+    justify-content: flex-end;
+  }
+  #cuerpo{
+  height: 80vh;
+  }

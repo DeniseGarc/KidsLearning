@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--Ruiz Girón Carlos Iram - 4AmPr - Omega - 28/05/2022-->
+<!--OBJETIVO DEL PROGRAMA, Hacer una pagina con 3 checkbox que combine los 3 colores
+primarios y con un boton cambie el fondo del color resultante-->
+<html>
+		<head>
+			<meta charset="utf-8">
+			<title>Colores</title>
+			<link rel="stylesheet" href="css/colors.css">
+					<script type="text/javascript">
+				/*Declaramos las variables y funciones que almacenan los datos que vamos a necesitar
+				para que al dar click a la imagen de los checkbox cambie para cada color respectivamente.*/
+				 			var numeroR=1;
+				 		function cambiarR(){
+				 			if (numeroR==1){
+				 				numeroR=0;
+				 			document.getElementById("nombreR").src="RMARCO.jpeg";
+				 			}
+				 			else{
+				 			numeroR=1;
+				 			document.getElementById("nombreR").src="RNA.jpg";
+				 			}
+				 		}
+				/*////////////////////////////////////////////////////////////////////////////*/
+				 		 	var numeroB=1;
+				 		function cambiarB(){
+				 			if (numeroB==1){
+				 				numeroB=0;
+				 			document.getElementById("nombreB").src="BMARCO.jpeg";
+				 			}
+				 			else{
+				 			numeroB=1;
+				 			document.getElementById("nombreB").src="BNA.jpg";
+				 			}
+				 		}
+				/*////////////////////////////////////////////////////////////////////////////*/
+				 	 		var numeroY=1;
+				 		function cambiarY(){
+				 			if (numeroY==1){
+				 				numeroY=0;
+				 			document.getElementById("nombreY").src="YMARCO.jpeg";
+				 			}
+				 			else{
+				 			numeroY=1;
+				 			document.getElementById("nombreY").src="YNA.jpg";
+				 			}
+				 		}
+
+				/*Definimos una funcion que realizara el proceso para combinar los Colores,
+				declara las variables de los checkbox y almacena si son verdaderos o falsos,
+				y los audios que se utilizaran al usar la funcion para que suenen dependiendo del color combinado*/
+						function MIX(){
+							//Declara las variables de los checkbox que almacena si son verdaderos o falsos.
+							var RED 		= document.getElementById("R");
+							var BLUE 		= document.getElementById("B");
+							var YELLOW 	= document.getElementById("Y");
+								//Se guardan los audios en una variable para despues llamarlos por el if/else.
+										var colorR 	= new Audio	("sonidos/red.wav");
+						       	var colorBL = new Audio	("sonidos/blue.wav");
+						       	var colorY 	= new Audio	("sonidos/yellow.wav");
+						       	var colorO 	= new Audio	("sonidos/orange.wav");
+						       	var colorG 	= new Audio	("sonidos/green.wav");
+						       	var colorP 	= new Audio	("sonidos/purple.wav");
+						       	var colorB 	= new Audio	("sonidos/black.wav");
+						       	var colorW 	= new Audio	("sonidos/white.wav");
+
+						       	//****************************************************************
+
+				/*comprueba si los checkbox rojo, azul y amarillo estan seleccionados, y si es verdadero muestra el color
+					que resultaria de estos 3, el texto y un audio, si no, comrueba el siguiente respectivamente
+					hasta llegar al final (como una cascada).*/
+							if (RED.checked==true && BLUE.checked==true && YELLOW.checked==true) {
+								document.body.style.backgroundColor = "#151515 ";
+								CLR.innerHTML = "BLACK/NEGRO";
+								CLR.style.color = "#FFFFFF";
+								colorB.play();
+								}
+										else {
+											if (RED.checked==true && BLUE.checked==true) {
+												document.body.style.backgroundColor = "#9C45D2 ";
+												CLR.innerHTML = "PURPLE/MORADO";
+												CLR.style.color = "#000000";
+												colorP.play();
+												}
+											else {
+												if (YELLOW.checked==true && BLUE.checked==true) {
+													document.body.style.backgroundColor = "#79D245 ";
+													CLR.innerHTML = "GREEN/VERDE";
+													CLR.style.color = "#000000";
+													colorG.play();
+													}
+												else {
+													if (YELLOW.checked==true && RED.checked==true) {
+														document.body.style.backgroundColor = "#EA8F20 ";
+														CLR.innerHTML = "ORANGE/NARANJA";
+														CLR.style.color = "#000000";
+														colorO.play();
+														}
+														else{
+															if (RED.checked==true){
+																document.body.style.backgroundColor = "#E84A3E";
+																CLR.innerHTML = "RED/ROJO";
+																CLR.style.color = "#000000";
+																colorR.play();
+																}
+															else{
+																if (BLUE.checked==true){
+																	document.body.style.backgroundColor = "#3597D4";
+																	CLR.innerHTML = "BLUE/AZUL";
+																	CLR.style.color = "#000000";
+																	colorBL.play();
+																	}
+																else{
+																	if (YELLOW.checked==true){
+																		document.body.style.backgroundColor = "#F1C413";
+																		CLR.innerHTML = "YELLOW/AMARILLO";
+																		CLR.style.color = "#000000";
+																		colorY.play();
+																		}
+																	else{
+																		document.body.style.backgroundColor = "#FFFFFF";
+																		CLR.innerHTML = "WHITE/BLANCO";
+																		CLR.style.color = "#000000";
+																		colorW.play();
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+
+				/*////////////////////////////////////////////////////////////////////////////*/
+
+							/*Creamos una funcion que recarga la pagina*/
+							function RST(){
+								location.reload();
+							}
+
+					</script>
+		</head>
+		<body>
+			<header>
+				<div class="container">
+						<a href="index.html"><p class="logo">Kids (●'◡'●) Learning</p></a>
+						<nav>
+							<a href="vocales.html">Vocales</a>
+							<a href="sonidos.html">Animales y números</a>
+							<a href="test.html">Test</a>
+						</nav>
+				</div>
+			</header>
+		<section id="cuerpo">
+
+				<h1>MIX COLORS!</h1>
+				<h2>[ ¡Mezcla los colores! ]</h2>
+				<h3>Selecciona los colores y luego presiona el boton SHOW para mezclar</h3>
+				<!--Declaramos un label para cada checkbox y se pueda usar una imagen dentro de ellos-->
+				<label>
+				<input type="checkbox" id="R" name="C"/>
+				<img id="nombreR" onclick="cambiarR()" src="RNA.jpg">
+				</label>
+
+				<label>
+				<input type="checkbox" id="B" name="C"/>
+				<img id="nombreB" onclick="cambiarB()" src="BNA.jpg">
+				</label>
+
+				<label>
+				<input type="checkbox" id="Y" name="C"/>
+				<img id="nombreY" onclick="cambiarY()" src="YNA.jpg">
+				</label>
+				<!--Aqui aparece el texto del color que resulto al utilizar la funcion-->
+				<div id="CLR" class="name"></div>
+		</section>
+				<!--creamos los botones que accionan las funciones que creamos -->
+				<button type="button" onclick="MIX()">SHOW</button>
+				<button type="button" onclick="RST()">RESET</button>
+
+
+				<footer id="us">
+						<div class="container">
+						<p class="logo-footer">Kids Learning</p>
+						<p>FOLLOW US</p>
+						<br>
+								<a href="https://www.twitter.com/KidsLearning"><img class="redes" src="https://img.icons8.com/color/344/twitter-circled--v1.png" alt="twitter"></a>
+								<a href="https://www.facebook.com/KidsLearning"><img class="redes" src="https://img.icons8.com/color/344/facebook-new.png" alt="facebook"></a>
+								<a href="https://www.youtube.com/c/KidsLearning/videos"><img class="redes" src="https://img.icons8.com/external-prettycons-flat-prettycons/344/external-youtube-multimedia-prettycons-flat-prettycons.png" alt="youtube"></a>
+								<a href="https://www.instagram.com/KidsLearning"><img class="redes" src="https://img.icons8.com/fluency/344/instagram-new.png" alt="instagram"></a>
+						<p>&copy; TEAM GALA 2022</p>
+						</div>
+				</footer>
+		</body>
+</html>

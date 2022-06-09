@@ -1,0 +1,205 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+h1{font-size: 3.5em;
+    margin: 20px 5px; }
+h2{font-size: 2.7em;
+    color: #4492DE;
+    margin: 0;}
+h3{font-size: 2em;}
+p{font-size: 2em;}
+body{
+  font-family: 'Comic Sans MS', sans-serif;
+  margin: 0;
+}
+img{
+  height: 250px;
+  width: 250px;
+  cursor: pointer;
+}
+header{
+  background-color: #5577F3;
+}
+header .logo{
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: #f3f3f3;
+  font-size: 2em;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+header a{
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+header a:hover{
+  color: black;
+}
+#animales{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#animales .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+#numeros{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#numeros .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+.carta:first-child{background-color:whitesmoke;}
+.carta:nth-child(2){background-color:whitesmoke;}
+.carta:nth-child(3){background-color:whitesmoke;}
+.carta:nth-child(4){background-color:whitesmoke;}
+.carta:nth-child(5){background-color:whitesmoke;}
+
+
+button{
+  padding: 20px 20px;
+  border-radius: 20px;
+  border-collapse: collapse;
+  border-color: whitesmoke;
+  background-color: #D364FF ;
+  font-size: 1.5em;
+  font-family: 'Comic Sans MS', sans-serif;
+  cursor: pointer;
+  padding-bottom: 30px;
+  height: 90px;
+  width: 240px;
+  margin: 20px;
+}
+button:hover{
+  background-color: #B741E6 ;
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+footer{
+  background-color: #5577F3;
+}
+footer p{
+  margin: 0;
+  padding: 12px;
+  color: white;
+  font-size: 1.3em;
+}
+footer .container{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer .redes{
+  height: 50px;
+  width: 50px;
+}
+
+@media (min-width: 790px){
+  img{
+  height: 100px;
+  width: 100px;
+}
+  header{
+    width: 100%;
+  }
+  header .container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav{
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+  }
+  #animales .cartas{
+    display: flex;
+    justify-content: center;
+  }
+  #animales{
+    height: auto;
+  }
+  #animales .carta{
+    padding: 20px;
+    height: auto;
+    width: 360px;
+    margin: 5px;
+  }
+  #animales button{
+    margin-top: 20px;
+  }
+  #animales .letter{
+    height: 170px ;
+    width: 170px;
+  }
+  #animales .sonido{
+    width: 40px;
+    height: 40px;
+  }
+  #animales h2{
+    padding-bottom: 20px;
+  }
+  #animales p{
+    font-size: 1.7em;
+  }
+
+#numeros .cartas{
+    display: flex;
+    justify-content: center;
+  }
+  #numeros{
+    height: auto;
+  }
+  #numeros .carta{
+    padding: 20px;
+    height: auto;
+    width: 360px;
+    margin: 5px;
+  }
+  #numeros button{
+    margin-top: 20px;
+  }
+  #numeros .letter{
+    height: 170px ;
+    width: 170px;
+  }
+  #numeros .sonido{
+    width: 40px;
+    height: 40px;
+  }
+  #numeros h2{
+    padding-bottom: 20px;
+  }
+  #numeros p{
+    font-size: 1.7em;
+  }
+    footer .container{
+    justify-content: flex-end;
+  }

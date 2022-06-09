@@ -1,0 +1,204 @@
+<!-- Codigo por: Garcia Acosta Alicia Denise
+		 4AMP omega
+     fecha: 30/05/2022
+		 funcion: visualizar las vocales e identificar su pronunciacion,
+	   practica de aprendizaje del orden de las vocales-->
+<!DOCTYPE html>
+<html>
+	<head>
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Vocales</title>
+				<!-- css de la pagina -->
+				<link rel="stylesheet" href="css/vocales.css">
+
+				<script>
+				//creacion de variables y funciones para cartas de vocales
+					//variable que guarda el sonido
+							var sonidoa = new Audio("sonidos/a.ogg");
+							//funcion que reproduce el sonido mediante una imagen
+							function a(){
+								sonidoa.play()
+							}
+							var sonidoe = new Audio("sonidos/e.ogg");
+							function e(){
+								sonidoe.play()
+							}
+							var sonidoi = new Audio("sonidos/i.ogg");
+							function i(){
+								sonidoi.play()
+							}
+							var sonidoo = new Audio("sonidos/o.ogg");
+							function o(){
+								sonidoo.play()
+							}
+							var sonidou = new Audio("sonidos/u.ogg");
+							function u(){
+								sonidou.play()
+							}
+
+						//funciones para los botones de la actividad
+
+							//se crea variable para la evalucion de orden correcto
+							var x=1;
+							//funciones que cambian valor de x
+							function letra1(){
+								if(x==1){
+									x=2;
+								}else{
+									x=0;
+								}
+								//sonido que resproduce el boton
+								sonidoa.play()
+							}
+							function letra2(){
+								if(x==2){
+									x=3;
+								}else{
+									x=0;
+								}
+								sonidoe.play()
+							}
+							function letra3(){
+								if(x==3){
+									x=4;
+								}else{
+									x=0;
+								}
+								sonidoi.play()
+							}
+							function letra4(){
+								if(x==4){
+									x=5;
+								}else{
+									x=0;
+								}
+								sonidoo.play()
+							}
+							function letra5(){
+								if(x==5){
+									x=6;
+								}else{
+									x=0;
+								}
+								sonidou.play()
+							}
+
+							//funcion boton resultado ALERT
+							/*evalua si se presionaron los botones en orden correcto mediante el
+								valor de x*/
+							function evaluar(){
+								if (x==6) {
+									alert("😊CORRECTO😊");
+									//se recarga la pagina al aceptar el alert
+									location.reload();
+								}else{
+									alert("INCORRECTO");
+									location.reload();
+								}
+							}
+
+							//funcion de boton reiniciar
+							function reset() {
+								//se reinicia el valor de x a su valor de origen
+								x=1;
+							}
+					</script>
+
+						</head>
+
+						<body>
+							<!-- encabezado -->
+							<header>
+								<div class="container">
+										<a href="index.html"><p class="logo">Kids (●'◡'●) Learning</p></a>
+										<nav>
+											<a href="colors.html">Colores</a>
+											<a href="sonidos.html">Animales y números</a>
+											<a href="test.html">Test</a>
+										</nav>
+								</div>
+							</header>
+				<!--cartas de vocales -->
+					<section id="vocales">
+						<div class="container">
+								<h1>Vowels</h1>
+							<h2>[ Vocales en inglés ]</h2>
+							<!-- letra a -->
+						<div class="imagenes">
+						<div class="carta">
+							<img class="letter" src="https://img.icons8.com/color/344/a-cute.png">
+								<img class="sonido" src="https://img.icons8.com/stickers/344/room-sound.png" onclick="a()">
+								<p>A is for Alligator</p>
+								<span>[ei]</span>
+								<br>
+						</div>
+							<!-- letra e -->
+						<div class="carta">
+							<img class="letter" src="https://img.icons8.com/color/344/e-cute.png">
+								<img class="sonido" src="https://img.icons8.com/stickers/344/room-sound.png" onclick="e()">
+								<p>E is for Elephant</p>
+								<span>[i]</span>
+								<br>
+						</div>
+							<!-- letra i -->
+						<div class="carta">
+							<img class="letter" src="https://img.icons8.com/color/452/i-cute.png">
+								<img class="sonido" src="https://img.icons8.com/stickers/344/room-sound.png" onclick="i()">
+								<p>I is for Iguana</p>
+								<span>[ai]</span>
+								<br>
+						</div>
+							<!-- letra o -->
+						<div class="carta">
+							<img class="letter" src="https://img.icons8.com/color/452/o-cute.png">
+								<img class="sonido" src="https://img.icons8.com/stickers/344/room-sound.png" onclick="o()">
+								<p>O is for Owl</p>
+								<span>[ou]</span>
+								<br>
+						</div>
+							<!-- letra u -->
+						<div class="carta">
+							<img class="letter" src="https://img.icons8.com/color/452/u-cute.png">
+								<img class="sonido" src="https://img.icons8.com/stickers/344/room-sound.png" onclick="u()">
+								<p>U is for Unicorn</p>
+								<span>[iu]</span>
+						</div>
+						</div>
+						</div>
+						</section>
+					<!-- actividad de presionar botones -->
+						<section id="actividad">
+
+							<h3>Ordena las vocales dando click en el orden correcto</h3>
+							<br>
+							<div class="container">
+								<div class="botones">
+									<!-- cada boton tiene la funcion correspondiente a su orden de presionar -->
+									<button onclick="letra3()"><img class="button" src="https://img.icons8.com/stickers/344/i.png"></button>
+									<button onclick="letra1()"><img class="button" src="https://img.icons8.com/stickers/344/a--v1.png"></button>
+									<button onclick="letra5()"><img class="button" src="https://img.icons8.com/stickers/344/u.png"></button>
+									<button onclick="letra2()"><img class="button" src="https://img.icons8.com/stickers/344/e--v1.png"></button>
+									<button onclick="letra4()"><img class="button" src="https://img.icons8.com/stickers/344/o.png"></button>
+								</div>
+								<div class="solos">
+								<button onclick="evaluar()">Resultados</button>
+								<button onclick="reset()">Intentar de nuevo</button>
+								</div>
+							</div>
+						</section>
+				<!-- pie de pagina -->
+				<footer id="us">
+	          <div class="container">
+	          <p class="logo-footer">Kids Learning</p>
+	          <p>FOLLOW US</p>
+	          <br>
+	              <a href="https://www.twitter.com/KidsLearning"><img class="redes" src="https://img.icons8.com/color/344/twitter-circled--v1.png" alt="twitter"></a>
+	              <a href="https://www.facebook.com/KidsLearning"><img class="redes" src="https://img.icons8.com/color/344/facebook-new.png" alt="facebook"></a>
+	              <a href="https://www.youtube.com/c/KidsLearning/videos"><img class="redes" src="https://img.icons8.com/external-prettycons-flat-prettycons/344/external-youtube-multimedia-prettycons-flat-prettycons.png" alt="youtube"></a>
+	              <a href="https://www.instagram.com/KidsLearning"><img class="redes" src="https://img.icons8.com/fluency/344/instagram-new.png" alt="instagram"></a>
+	          <p>&copy; TEAM GALA 2022</p>
+	          </div>
+	      </footer>
+	</body>
+</html>

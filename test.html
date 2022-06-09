@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--Codigo realizado por: Juan Pablo Olivarría Covarrubias, 4AmPr Omega, 3/06/2022
+    El objetivo de esta página es hacer un test con la información de las 3 paginas de mis compañeros-->
+<html>
+      <head>
+          <meta charset="utf-8">
+          <title>Test</title>
+          <link rel="stylesheet" href="css/test.css">
+
+          <script type="text/javascript">
+            //Esta funcion hace que busque el audio en la carpeta de la pagina y lo reproduzca
+            function vaca(){new Audio("sonidos/cow.wav").play();}
+
+            function resultado() {
+              var nota=0;
+               /*checked es una propiedad DOM, esta comprueba si esta seleccionado el radio con el id del html
+                 si esta seleccionado, la variable nota=nota+1 y pues este mantiene la puntuacion de respuestas correctas
+                 si esta seleccionado, tambien cambia el div del body a correcto, de color verde, y si no a incorrecto, de color rojo*/
+              if (document.getElementById('v1').checked==true) {nota+=1;document.getElementById("c1").innerHTML='Correcto';document.getElementById("c1").style.color="green";}
+              else{document.getElementById("c1").innerHTML='Incorrecto';document.getElementById("c1").style.color="red";}
+
+              if (document.getElementById('v2').checked==true) {nota+=1;document.getElementById("c2").innerHTML='Correcto';document.getElementById("c2").style.color="green";}
+              else{document.getElementById("c2").innerHTML='Incorrecto';document.getElementById("c2").style.color="red";}
+
+              if (document.getElementById('v3').checked==true) {nota+=1;document.getElementById("c3").innerHTML='Correcto';document.getElementById("c3").style.color="green";}
+              else{document.getElementById("c3").innerHTML='Incorrecto';document.getElementById("c3").style.color="red";}
+
+              if (document.getElementById('v4').checked==true) {nota+=1;document.getElementById("c4").innerHTML='Correcto';document.getElementById("c4").style.color="green";}
+              else{document.getElementById("c4").innerHTML='Incorrecto';document.getElementById("c4").style.color="red";}
+
+              if (document.getElementById('v5').checked==true) {nota+=1;document.getElementById("c5").innerHTML='Correcto';document.getElementById("c5").style.color="green";}
+              else{document.getElementById("c5").innerHTML='Incorrecto';document.getElementById("c5").style.color="red";}
+
+              if (document.getElementById('v6').checked==true) {nota+=1;document.getElementById("c6").innerHTML='Correcto';document.getElementById("c6").style.color="green";}
+              else{document.getElementById("c6").innerHTML='Incorrecto';document.getElementById("c6").style.color="red";}
+
+              if (document.getElementById('v7').checked==true) {nota+=1;document.getElementById("c7").innerHTML='Correcto';document.getElementById("c7").style.color="green";}
+              else{document.getElementById("c7").innerHTML='Incorrecto';document.getElementById("c7").style.color="red";}
+
+              if (document.getElementById('v8').checked==true) {nota+=1;document.getElementById("c8").innerHTML='Correcto';document.getElementById("c8").style.color="green";}
+              else{document.getElementById("c8").innerHTML='Incorrecto';document.getElementById("c8").style.color="red";}
+
+              if (document.getElementById('v9').checked==true) {nota+=1;document.getElementById("c9").innerHTML='Correcto';document.getElementById("c9").style.color="green";}
+              else{document.getElementById("c9").innerHTML='Incorrecto';document.getElementById("c9").style.color="red";}
+
+              if (document.getElementById('v10').checked==true) {nota+=1;document.getElementById("c10").innerHTML='Correcto';document.getElementById("c10").style.color="green";}
+              else{document.getElementById("c10").innerHTML='Incorrecto';document.getElementById("c10").style.color="red";}
+
+              alert(" Aciertos: " + nota);
+            }
+          </script>
+      </head>
+
+      <body>
+          <header>
+      			<div class="container">
+      					<a href="index.html"><p class="logo">Kids (●'◡'●) Learning</p></a>
+      					<nav>
+      						<a href="colors.html">Colores</a>
+      						<a href="vocales.html">Vocales</a>
+      						<a href="sonidos.html">Animales y números</a>
+      					</nav>
+      			</div>
+      		</header>
+
+              <!--Hicimos un section para modificar el css-->
+          <section id="preguntas">
+              <h2>T E S T</h2>
+              <!--Hicimos 10 preguntas con el mismo formato, tienen 4 respuestas del tipo radio, cada pregunta tiene 1 div que los separa
+                  con la clase "radios", esto es para el css, la pregunta correcta tiene un id para luego comprobar en js si esta seleccionada,
+                  los div de abajo tienen un id para cambiarlo a correcto o incorrecto dependiendo de si esta seleccionado la respuesta correcta,
+                  y tambien tiene la clase "resultado" para el css-->
+              <p>1. ¿Cuál es la 3ra VOCAL?</p>
+<div class="radios">
+              <p><input type="radio" name="pregunta1" id="v1"> i</p>
+              <p><input type="radio" name="pregunta1"> o</p>
+              <p><input type="radio" name="pregunta1"> a</p>
+              <p><input type="radio" name="pregunta1"> e</p>
+</div>
+              <div class="resultado" id=c1></div><br>
+
+
+              <p>2. ¿Cómo se traduce PATO al inglés? </p>
+<div class="radios">
+              <p><input type="radio" name="pregunta2"> Monkey</p>
+              <p><input type="radio" name="pregunta2" id="v2"> Duck</p>
+              <p><input type="radio" name="pregunta2"> Frog</p>
+              <p><input type="radio" name="pregunta2"> Dog</p>
+</div>
+              <div class="resultado" id=c2></div><br>
+
+
+              <p>3. ¿Cómo se traduce MANZANA al ingles?</p>
+<div class="radios">
+              <p><input type="radio" name="pregunta3"> Melon</p>
+              <p><input type="radio" name="pregunta3"> Pear</p>
+              <p><input type="radio" name="pregunta3" id="v3"> Apple</p>
+              <p><input type="radio" name="pregunta3"> Grapes</p>
+</div>
+              <div class="resultado" id=c3></div><br>
+
+
+              <p>4. ¿Qué significa RED en español?</p>
+<div class="radios">
+              <p><input type="radio" name="pregunta4"> Rosa</p>
+              <p><input type="radio" name="pregunta4"> Naranja</p>
+              <p><input type="radio" name="pregunta4"> Azul</p>
+              <p><input type="radio" name="pregunta4" id="v4"> Rojo</p>
+</div>
+              <div class="resultado" id=c4></div><br>
+
+
+              <p>5. FOUR significa:</p>
+<div class="radios">
+              <p><input type="radio" name="pregunta5"> 2</p>
+              <p><input type="radio" name="pregunta5"> 1</p>
+              <p><input type="radio" name="pregunta5 "id="v5"> 4</p>
+              <p><input type="radio" name="pregunta5"> 5</p>
+</div>
+              <div class="resultado" id=c5></div><br>
+
+
+              <p>6. Significado de la palabra DOG</p>
+<div class="radios">
+              <p><input type="radio" name="pregunta6" id="v6"> Perro</p>
+              <p><input type="radio" name="pregunta6"> Pato</p>
+              <p><input type="radio" name="pregunta6"> Toro</p>
+              <p><input type="radio" name="pregunta6"> Loro</p>
+</div>
+              <div class="resultado" id=c6></div><br>
+
+
+              <p>7. El AZUL y el AMARILLO hacen este color:</p>
+<div class="radios">
+              <p><input type="radio" name="pregunta7"> Red</p>
+              <p><input type="radio" name="pregunta7"> Blue</p>
+              <p><input type="radio" name="pregunta7" id="v7"> Green</p>
+              <p><input type="radio" name="pregunta7"> Yellow</p>
+</div>
+              <div class="resultado" id=c7></div><br>
+
+
+              <p>8. El color Naranja se escribe en inglés como:</p>
+<div class="radios">
+              <p><input type="radio" name="pregunta8"> Brown</p>
+              <p><input type="radio" name="pregunta8"> Yellow</p>
+              <p><input type="radio" name="pregunta8"> Red</p>
+              <p><input type="radio" name="pregunta8" id="v8"> Orange</p>
+</div>
+              <div class="resultado" id=c8></div><br>
+
+
+              <p>9. La 4ta vocal es:</p>
+<div class="radios">
+              <p><input type="radio" name="pregunta9"> e</p>
+              <p><input type="radio" name="pregunta9" id="v9"> o</p>
+              <p><input type="radio" name="pregunta9"> u</p>
+              <p><input type="radio" name="pregunta9"> a</p>
+</div>
+              <div class="resultado" id=c9></div><br>
+
+              <!--Pusimos una imagen que al darle click ejecuta la funcion "vaca()", y el src es el link a una imagen de un icono de sonido-->
+              <p>10. ¿Qué animal hace el siguiente sonido? <img onclick="vaca()" src="https://img.icons8.com/stickers/344/room-sound.png"></p>
+<div class="radios">
+              <p><input type="radio" name="pregunta10"> Snake</p>
+              <p><input type="radio" name="pregunta10"> Bull</p>
+              <p><input type="radio" name="pregunta10"> Lion</p>
+              <p><input type="radio" name="pregunta10" id="v10"> Cow</p>
+</div>
+              <div class="resultado" id=c10></div><br>
+          </section>
+
+              <!--Botones que realizan la funcion resultado(), y location.reload(), esta ultima es una funcion integrada de js que recarga la pagina-->
+              <button type="button" name="button" onclick="resultado()">Comprobar</button>
+              <button type="button" name="button" onclick="location.reload()">Reintentar</button>
+
+
+              <!--El pie de pagina contiene 4 fotos que nos llevan a "nuestras" redes sociales, cada foto te lleva a la respectiva red social-->
+              <footer id="us">
+      	          <div class="container">
+      	          <p class="logo-footer">Kids Learning</p>
+      	          <p>FOLLOW US</p>
+      	          <br>
+      	              <a href="https://www.twitter.com/KidsLearning"><img class="redes" src="https://img.icons8.com/color/344/twitter-circled--v1.png" alt="twitter"></a>
+      	              <a href="https://www.facebook.com/KidsLearning"><img class="redes" src="https://img.icons8.com/color/344/facebook-new.png" alt="facebook"></a>
+      	              <a href="https://www.youtube.com/c/KidsLearning/videos"><img class="redes" src="https://img.icons8.com/external-prettycons-flat-prettycons/344/external-youtube-multimedia-prettycons-flat-prettycons.png" alt="youtube"></a>
+      	              <a href="https://www.instagram.com/KidsLearning"><img class="redes" src="https://img.icons8.com/fluency/344/instagram-new.png" alt="instagram"></a>
+      	          <p>&copy; TEAM GALA 2022</p>
+      	          </div>
+      	      </footer>
+        </body>
+</html>

@@ -1,0 +1,392 @@
+<!--Código realizado por: Morales Esquer Pedro, 4AMPr omega, 05 de Junio del 2022-->
+<!--El propósito de esta página es que los niños que la utilicen, puedan relacionar los sonidos con las palabras. Así puedan saber el significado de ciertas palabras
+en inglés, al igual que los números.-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animales y números</title>
+    <link rel="stylesheet" href="css/prueba.css">
+
+    <script>
+      //sonidos
+      /*Creamos variables las cuales se les asigne el audio correspondiente, y con la función, utilizamos el método .play que ayudará a que el audio se reproduzca.*/
+        var sonidouno = new Audio("sonidos/one.wav");
+        function uno(){sonidouno.play()}
+
+        var sonidodos = new Audio("sonidos/two.wav");
+        function dos(){sonidodos.play()}
+
+        var sonidotres = new Audio("sonidos/three.wav");
+        function tres(){sonidotres.play()}
+
+        var sonidocuatro = new Audio("sonidos/four.wav");
+        function cuatro(){sonidocuatro.play()}
+
+        var sonidocinco = new Audio("sonidos/five.wav");
+        function cinco(){sonidocinco.play()}
+
+        //animales
+        /*De igual manera realizamos el mismo proceso en la seccion de los animales, creamos una variable, le asginamos un sonido y con ayuda de la función
+        y el método .play() hacemos que el sonido se reproduzca.*/
+        var sonidovaca = new Audio("sonidos/cow.wav");
+        function vaca(){sonidovaca.play()}
+
+        var sonidopato = new Audio("sonidos/duck.wav");
+        function pato(){sonidopato.play()}
+
+        var sonidopig = new Audio("sonidos/pig.wav");
+        function puerco(){sonidopig.play()}
+
+        var sonidoperro = new Audio("sonidos/dog.wav");
+        function perro(){sonidoperro.play()}
+
+        var sonidoleon = new Audio("sonidos/lion.wav");
+        function leon(){sonidoleon.play()}
+
+          //Imagenes radio buttons
+          //Creamos una función encargada de dar los primeros resultados de los radio buttons.
+        function results(){
+          //first
+          /*Mediante un ciclo if-else, le decimos que si, el id que le otorgamos al radio button con la respuesta correcta, es seleccionado, se coloque dentro de la página
+          con un innerHTLM y si es correcto coloque, "respuesta correcta" y se coloque verde. De lo contrario diga "respuesta incorrecta", y se coloque en rojo. Así seguido
+          con todas las preguntas.*/
+        if (document.getElementById('a1').checked==true){
+          document.getElementById("vaca").innerHTML="aquí hay una vaca";
+          document.getElementById("vacaX").innerHTML="Respuesta correcta";
+          document.getElementById("vacaX").style.color= "green";
+
+        }else{
+          document.getElementById("vacaX").innerHTML="Respuesta incorrecta";
+          document.getElementById("vacaX").style.color= "red";
+
+        }
+
+        //second
+        if (document.getElementById('a2').checked==true){
+          document.getElementById("cerdo").innerHTML="aquí hay un cerdo";
+          document.getElementById("cerdoX").innerHTML="Respuesta correcta";
+          document.getElementById("cerdoX").style.color= "green";
+
+        }else{
+          document.getElementById("cerdoX").innerHTML="Respuesta incorrecta";
+          document.getElementById("cerdoX").style.color= "red";
+
+        }
+        //third
+        if (document.getElementById('a3').checked==true){
+          document.getElementById("pato").innerHTML="aquí hay un pato";
+          document.getElementById("patoX").innerHTML="Respuesta correcta";
+          document.getElementById("patoX").style.color= "green";
+
+        }else{
+          document.getElementById("patoX").innerHTML="Respuesta incorrecta";
+          document.getElementById("patoX").style.color= "red";
+
+        }
+        //fourth
+        if (document.getElementById('a4').checked==true){
+          document.getElementById("leon").innerHTML="aquí hay un león";
+          document.getElementById("leonX").innerHTML="Respuesta correcta";
+          document.getElementById("leonX").style.color= "green";
+
+        }else{
+          document.getElementById("leonX").innerHTML="Respuesta incorrecta";
+          document.getElementById("leonX").style.color= "red";
+
+        }
+        //fifth
+        if (document.getElementById('a5').checked==true){
+          document.getElementById("perro").innerHTML="aquí hay un perro";
+          document.getElementById("perroX").innerHTML="Respuesta correcta";
+          document.getElementById("perroX").style.color= "green";
+
+        }else{
+          document.getElementById("perroX").innerHTML="Respuesta incorrecta";
+          document.getElementById("perroX").style.color= "red";
+
+        }
+      }
+        //numeros radio buttons
+        //Creamos una segunda función encargada de dar los resultados de la segunda parte de los radio buttons.
+        function results2(){
+        //first
+        /*Mediante un ciclo if-else, le decimos que si, el id que le otorgamos al radio button con la respuesta correcta, es seleccionado, se coloque dentro de la página
+        con un innerHTLM y si es correcto coloque, "respuesta correcta" y se coloque verde. De lo contrario diga "respuesta incorrecta", y se coloque en rojo. Así seguido
+        con todas las preguntas.*/
+        if (document.getElementById('c1').checked==true){
+          document.getElementById("apple").innerHTML="Tres manzanas";
+          document.getElementById("appleX").innerHTML="Respuesta correcta";
+          document.getElementById("appleX").style.color= "green";
+
+        }else{
+          document.getElementById("appleX").innerHTML="Respuesta incorrecta";
+          document.getElementById("appleX").style.color= "red";
+
+        }
+
+        //second
+        if (document.getElementById('c2').checked==true){
+          document.getElementById("banana").innerHTML="Dos platanos";
+          document.getElementById("bananaX").innerHTML="Respuesta correcta";
+          document.getElementById("bananaX").style.color= "green";
+
+        }else{
+          document.getElementById("bananaX").innerHTML="Respuesta incorrecta";
+          document.getElementById("bananaX").style.color= "red";
+
+        }
+
+        //third
+        if (document.getElementById('c3').checked==true){
+          document.getElementById("avion").innerHTML="Un avión";
+          document.getElementById("avionX").innerHTML="Respuesta correcta";
+          document.getElementById("avionX").style.color= "green";
+
+        }else{
+          document.getElementById("avionX").innerHTML="Respuesta incorrecta";
+          document.getElementById("avionX").style.color= "red";
+
+        }
+
+        //fourth
+        if (document.getElementById('c4').checked==true){
+          document.getElementById("rana").innerHTML="Cinco ranas";
+          document.getElementById("ranaX").innerHTML="Respuesta correcta";
+          document.getElementById("ranaX").style.color= "green";
+
+        }else{
+          document.getElementById("ranaX").innerHTML="Respuesta incorrecta";
+          document.getElementById("ranaX").style.color= "red";
+
+        }
+
+        //fifth
+        if (document.getElementById('c5').checked==true){
+          document.getElementById("niño").innerHTML="Cuatro niños";
+          document.getElementById("niñoX").innerHTML="Respuesta correcta";
+          document.getElementById("niñoX").style.color= "green";
+
+        }else{
+          document.getElementById("niñoX").innerHTML="Respuesta incorrecta";
+          document.getElementById("niñoX").style.color= "red";
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+    <!--Le damos formato a la cabeza de la página que contendrá ciertos apartados que te redigirán a otras secciones de la página.-->
+        <header>
+    			<div class="container">
+            <!--Aquí indicamos que los apartados de la cabeza de la página tengan un destino a redirigir.-->
+    					<a href="index.html"><p class="logo">Kids (●'◡'●) Learning</p></a>
+    					<nav>
+    						<a href="colors.html">Colores</a>
+    						<a href="vocales.html">Vocales</a>
+    						<a href="test.html">Test</a>
+    					</nav>
+    			</div>
+    		</header>
+      <section id="animales">
+        <div class="container">
+        <h1>Animals</h1>
+        <h2>[ Animales ]</h2>
+        <h3>Selecciona la respuesta correcta</h3>
+        <!-- vaca -->
+      <div class="cartas">
+      <div class="carta">
+        <!--Colocamos una imagen que esta servirá como botón que mediante una función hara que suene el animal correspondiente.-->
+        <img src="https://images.vexels.com/media/users/3/205228/isolated/lists/2b65e26361a8d87416b4ce2f6deaf5fc-vaca-mirando-hacia-arriba-ilustracion.png" onclick="vaca()">
+        <!--Creamos distintos radio buttons los cuales mediante un id definiremos si es la respuesta correcta utilizando una función en la sección del script,
+      haciendo esto con todos los radio buttons para todos los animales.-->
+        <!--Al párrafo le damos 2 ids, uno por si la respuesta seleccionada es correcta y por si es incorrecta. De igual manera a la respuesta correcta le
+        otorgamos un id-->
+        <p>here is a COW</p>
+        <p id="vaca"><span>aquí hay una</span> ____</p>
+        <div class="radio">
+        <input type="radio" name="radio1" id="a1">Vaca
+        <input type="radio" name="radio1">Gato
+        <input type="radio" name="radio1">Conejo
+        </div>
+        <p id="vacaX"></p>
+      </div>
+        <!-- cerdo -->
+      <div class="carta">
+        <img src="https://img.icons8.com/color/344/pig.png" onclick="puerco()">
+
+        <p>here is a PIG</p>
+        <p id="cerdo"><span>aquí hay un</span> ____</p>
+        <div class="radio">
+        <input type="radio" name="radio2">Vaca
+        <input type="radio" name="radio2">Perro
+        <input type="radio" name="radio2" id="a2">Cerdo
+        </div>
+        <p id="cerdoX"></p>
+      </div>
+        <!-- Pato -->
+      <div class="carta">
+        <img src="https://img.icons8.com/external-victoruler-flat-victoruler/344/external-duck-farming-victoruler-flat-victoruler.png" onclick="pato()">
+
+        <p>here is a DUCK</p>
+        <p id="pato"><span>aquí hay un</span> ____</p>
+        <div class="radio">
+        <input type="radio" name="radio3">Perro
+        <input type="radio" name="radio3" id="a3">Pato
+        <input type="radio" name="radio3">Rana
+        </div>
+        <p id="patoX"></p>
+      </div>
+        <!-- leon -->
+      <div class="carta">
+        <img src="https://images.vexels.com/media/users/3/158492/isolated/lists/e9d2d72d6a4bfd819e636015d852a5af-ilustracion-de-lindo-leon.png" onclick="leon()">
+
+        <p>here is a LION</p>
+        <p id="leon"><span>aquí hay un</span> ____</p>
+        <div class="radio">
+        <input type="radio" name="radio4" id="a4">León
+        <input type="radio" name="radio4">Rana
+        <input type="radio" name="radio4">Serpiente
+        </div>
+        <p id="leonX"></p>
+      </div>
+        <!-- perro -->
+      <div class="carta">
+        <img src="https://img.icons8.com/external-justicon-flat-justicon/344/external-dog-dog-and-cat-justicon-flat-justicon-1.png" onclick="perro()">
+
+        <p>here is a DOG</p>
+        <p id="perro"><span>aquí hay un</span> ____</p>
+        <div class="radio">
+        <input type="radio" name="radio5" >Gato
+        <input type="radio" name="radio5" id="a5">Perro
+        <input type="radio" name="radio5">Cerdo
+        </div>
+        <p id="perroX"></p>
+      </div>
+      </div>
+      </div>
+      <div class="solos">
+
+        <button type="button" onclick="results()">Comprobar</button>
+        <button type="button" onclick="location.reload()">Volver a intentar</button>
+      </div>
+
+      </section>
+<!-- NUMEROS SECCIONNNNN -->
+        <section id="numeros">
+          <div class="container">
+
+          <h1>Numbers</h1>
+          <h2>[ Números ]</h2>
+          <h3>Selecciona la respuesta correcta</h3>
+      <!--NUMEROS -->
+    <div class="cartas">
+
+
+    <div class="carta">
+      <div class=".img-container">
+        <!--En esta sección, colocamos el número de imagenes correspondientes al número que contiene la pregunta, de igual manera con la función, que ayudará a
+        que tenga el sonido del numero correspondiente a la imagen.-->
+        <img src="https://images.vexels.com/media/users/3/131878/isolated/lists/384b201e3c4076950837a47f417fcddf-icono-de-manzana-roja.png" onclick="uno()">
+        <img src="https://images.vexels.com/media/users/3/131878/isolated/lists/384b201e3c4076950837a47f417fcddf-icono-de-manzana-roja.png" onclick="dos()">
+        <img src="https://images.vexels.com/media/users/3/131878/isolated/lists/384b201e3c4076950837a47f417fcddf-icono-de-manzana-roja.png" onclick="tres()">
+      </div>
+        <!--Creamos distintos radio buttons los cuales mediante un id definiremos si es la respuesta correcta utilizando una función en la sección del script,
+      haciendo esto con todos los radio buttons para todos los animales.-->
+        <!--Al párrafo le damos 2 ids, uno por si la respuesta seleccionada es correcta y por si es incorrecta. De igual manera a la respuesta correcta le
+        otorgamos un id-->
+        <p>THREE apples</p>
+        <p id="apple">____ <span>manzanas</span></p>
+        <div class="radio">
+        <input type="radio" name="radio1">Dos
+        <input type="radio" name="radio1" id="c1">Tres
+        <input type="radio" name="radio1">Diez
+        </div>
+        <p id="appleX"></p>
+    </div>
+        <!-- 2 plátanos  -->
+    <div class="carta">
+      <div class=".img-container">
+        <img src="https://cdn-icons-png.flaticon.com/128/6866/6866528.png" onclick="uno()">
+        <img src="https://cdn-icons-png.flaticon.com/128/6866/6866528.png" onclick="dos()">
+      </div>
+        <p>TWO bananas</p>
+        <p id="banana">____ <span>plátanos</span></p>
+        <div class="radio">
+        <input type="radio" name="radio2" id="c2">Dos
+        <input type="radio" name="radio2">Cinco
+        <input type="radio" name="radio2">Seis
+        </div>
+        <p id="bananaX"></p>
+    </div>
+        <!-- 1 avion -->
+    <div class="carta">
+      <div class=".img-container">
+        <img src="https://images.vexels.com/media/users/3/145795/isolated/lists/05cd33059a006bf49006097af4ccba98-avion-en-vuelo.png" onclick="uno()">
+      </div>
+        <p>ONE airplane</p>
+        <p id="avion">____ <span>avión</span></p>
+        <div class="radio">
+        <input type="radio" name="radio3">Seis
+        <input type="radio" name="radio3">Cuatro
+        <input type="radio" name="radio3" id="c3">Uno
+        </div>
+        <p id="avionX"></p>
+    </div>
+        <!-- 5 ranas -->
+    <div class="carta">
+      <div class=".img-container">
+        <img src="https://cdn-icons-png.flaticon.com/128/5999/5999607.png" onclick="uno()">
+        <img src="https://cdn-icons-png.flaticon.com/128/5999/5999607.png" onclick="dos()">
+        <img src="https://cdn-icons-png.flaticon.com/128/5999/5999607.png" onclick="tres()">
+        <img src="https://cdn-icons-png.flaticon.com/128/5999/5999607.png" onclick="cuatro()">
+        <img src="https://cdn-icons-png.flaticon.com/128/5999/5999607.png" onclick="cinco()">
+      </div>
+        <p>FIVE frogs</p>
+        <p id="rana">____ <span>ranas</span></p>
+        <div class="radio">
+        <input type="radio" name="radio4">Diez
+        <input type="radio" name="radio4" id="c4">Cinco
+        <input type="radio" name="radio4">Ocho
+        </div>
+        <p id="ranaX"></p>
+    </div>
+        <!-- 4 niño<s -->
+    <div class="carta">
+      <div class=".img-container">
+        <img src="https://img.icons8.com/external-flat-icon-mangsaabguru-/2x/external-kid-kid-hobby-flat-flat-icon-mangsaabguru--23.png" onclick="uno()">
+        <img src="https://img.icons8.com/external-flat-icon-mangsaabguru-/2x/external-kid-kid-hobby-flat-flat-icon-mangsaabguru--11.png" onclick="dos()">
+        <img src="https://img.icons8.com/external-flat-icon-mangsaabguru-/2x/external-kid-kid-hobby-flat-flat-icon-mangsaabguru--9.png" onclick="tres()">
+        <img src="https://img.icons8.com/external-flat-icon-mangsaabguru-/2x/external-kid-kid-hobby-flat-flat-icon-mangsaabguru--3.png" onclick="cuatro()">
+      </div>
+        <p>FOUR kids</p>
+        <p id="niño">____ <span>niños</span></p>
+        <div class="radio">
+        <input type="radio" name="radio5" id="c5">Cuatro
+        <input type="radio" name="radio5">Veinte
+        <input type="radio" name="radio5">Dos
+        </div>
+        <p id="niñoX"></p>
+    </div>
+  </div>
+      <div class="solos">
+        <!--Creamos un botón que tome función mediante el metodo onclick, el cual será el que muestre los resultados.-->
+        <button type="button" onclick="results2()">Comprobar</button>
+        <!--Le asignamos al botón de volver a intentar, que únicamente recargue la página-->
+        <button type="button" onclick="location.reload()">Volver a intentar</button>
+      </div>
+        </section>
+        <!--Colocamos imagenes que redirijan a las redes de KidsLearning.-->
+        <footer id="us">
+	          <div class="container">
+	          <p class="logo-footer">Kids Learning</p>
+	          <p>FOLLOW US</p>
+	          <br>
+	              <a href="https://www.twitter.com/KidsLearning"><img class="redes" src="https://img.icons8.com/color/344/twitter-circled--v1.png" alt="twitter"></a>
+	              <a href="https://www.facebook.com/KidsLearning"><img class="redes" src="https://img.icons8.com/color/344/facebook-new.png" alt="facebook"></a>
+	              <a href="https://www.youtube.com/c/KidsLearning/videos"><img class="redes" src="https://img.icons8.com/external-prettycons-flat-prettycons/344/external-youtube-multimedia-prettycons-flat-prettycons.png" alt="youtube"></a>
+	              <a href="https://www.instagram.com/KidsLearning"><img class="redes" src="https://img.icons8.com/fluency/344/instagram-new.png" alt="instagram"></a>
+	          <p>&copy; TEAM GALA 2022</p>
+	          </div>
+	      </footer>
+    </body>
+</html>
